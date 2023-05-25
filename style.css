@@ -5,6 +5,19 @@
     display: none;
 } */
 
+.formdiv {
+    display: flex;
+    justify-content: center;
+    font-family: 'Roboto Mono', monospace;
+    padding-top: 1rem;
+    padding-bottom: 2rem;
+
+}
+
+#formdiv > input {
+    width: 200px;
+}
+
 #books {
     display: flex;
     flex-direction: row;
@@ -17,7 +30,17 @@
     border-radius: 7px;
     width: 200px;
     height: 100%;
-    margin: 0.5rem;
+    font-family: 'Roboto Mono', monospace;
+    margin: 0 auto 2rem auto;
+
+
+}
+
+#books > div > button{
+    border-radius: 8px;
+    width: 8em;
+    height: 40px;
+    margin: 0.4em;
 }
 
 .nav{

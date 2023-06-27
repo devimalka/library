@@ -1,11 +1,30 @@
 let myLibrary = []
 
-function Book(title,author,pages){
-    this.title = title
-    this.author = author
-    this.pages = pages
-    this.read = false
+
+class Book{
+    constructor(title,author,pages){
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = false;
+    }
+
+    readOrNot(){
+        if(this.read){
+            this.read = false;
+        }
+        else{
+            this.read = true;
+        }
+    }
 }
+
+// function Book(title,author,pages){
+//     this.title = title
+//     this.author = author
+//     this.pages = pages
+//     this.read = false
+// }
 
 function addBookToLibrary(book){
 
@@ -107,7 +126,7 @@ function deleteBook(data){
 function readOrNot(data){
     book = data.getAttribute('data-index');
     book = myLibrary[book];
-    updateRead(book);
+    book.readOrNot();
     showBooks();
 }
 
